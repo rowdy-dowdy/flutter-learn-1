@@ -26,37 +26,98 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.red,
       ),
-      home: Home(),
+      home: RowdyCart(),
     );
   }
 }
 
-class Home extends StatelessWidget {
-  const Home({ Key? key }) : super(key: key);
+class RowdyCart extends StatefulWidget {
+  const RowdyCart({ Key? key }) : super(key: key);
 
+  @override
+  State<RowdyCart> createState() => _RowdyCartState();
+}
+
+class _RowdyCartState extends State<RowdyCart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Text('my first app 2'),
+        title: Text('Rowdy Dowdy Card'),
         centerTitle: true,
+        backgroundColor: Colors.grey[800],
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: (){},
-          child: Text('Click here'),
-          style: ElevatedButton.styleFrom(
-            primary: Colors.purple,
-            padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-            textStyle: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold)
-          ),
-        )        
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Text('Click'),
-        onPressed: () {},
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 40, vertical: 30),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('images/avatar.png'),
+                radius: 40,
+              ),
+            ),
+            Divider(
+              height: 60,
+              color: Colors.grey[800],
+            ),
+            Text(
+              'Name',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2.0
+              ),
+            ),
+            SizedBox(height: 10,),
+            Text(
+              'Viet Hung',
+              style: TextStyle(
+                color: Colors.amberAccent[200],
+                letterSpacing: 2,
+                fontSize: 28,
+                fontWeight: FontWeight.bold
+              ),
+            ),
+            SizedBox(height: 30,),
+            Text(
+              'Current rowdy level',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2.0
+              ),
+            ),
+            SizedBox(height: 10,),
+            Text(
+              '8',
+              style: TextStyle(
+                color: Colors.amberAccent[200],
+                letterSpacing: 2,
+                fontSize: 28,
+                fontWeight: FontWeight.bold
+              ),
+            ),
+            SizedBox(height: 30,),
+            Row(
+              children: [
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
+                ),
+                SizedBox(width: 10),
+                Text(
+                  'viet.hung.2898@gmail.com',
+                  style: TextStyle(
+                    color: Colors.grey[400],
+                    letterSpacing: 1,
+                    fontSize: 18,
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

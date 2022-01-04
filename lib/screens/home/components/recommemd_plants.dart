@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/screens/details/details_screen.dart';
 import 'package:myapp/utils/config.dart';
 
 class RecommemdPlants extends StatelessWidget {
@@ -17,21 +18,42 @@ class RecommemdPlants extends StatelessWidget {
             title: "Samantha",
             country: "Russia",
             price: 440,
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(),
+                ),
+              );
+            },
           ),
           RecommemdPlantCard(
             image: "images/image_2.png",
             title: "Samantha",
             country: "Russia",
             price: 440,
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(),
+                ),
+              );
+            },
           ),
           RecommemdPlantCard(
             image: "images/image_3.png",
             title: "Samantha",
             country: "Russia",
             price: 440,
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(),
+                ),
+              );
+            },
           ),
           SizedBox(width: kDefaultPadding,)
         ],

@@ -2,7 +2,7 @@ import 'dart:html';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:myapp/screens/home/home.dart';
+import 'package:myapp/screens/home/home_screen.dart';
 import 'utils/config.dart';
 
 void main() {
